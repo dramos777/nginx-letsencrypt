@@ -13,5 +13,5 @@ docker run --rm -p 80:80 \
   -v "./letsencrypt/certbot/conf:/etc/letsencrypt" \
   -v "./letsencrypt/certbot/www:/var/www/certbot" \
   certbot/certbot certonly --standalone \
-  -d "$DOMAIN" --agree-tos -n -m "$EMAIL"
+  -d "$DOMAIN" -d "www.$DOMAIN" --agree-tos -n -m "$EMAIL"
 
